@@ -7,10 +7,6 @@ you are going to use are synthetic datasets.
 2.1 Programming Requirements
 a. You must use Python to implement all tasks. Spark is not a requirement.
 
-2.2 Submission Platform
-We will use Gradescope to automatically run and grade your submission. You must test your scripts on
-the local machine before submission.
-
 2.3 Programming Environment
 Python 3.9.12
 
