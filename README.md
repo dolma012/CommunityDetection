@@ -4,19 +4,12 @@ Overview of the Assignment: Explored the Spark GraphFrames library as well as im
 
 
 Requirements: 
-2.1 Programming Requirements
 a. Python and Spark to implement all tasks.
 b. Spark DataFrame and GraphFrames library for task1
 c. ONLY Spark RDD and standard Python libraries for task2
 
 2.3 Programming Environment
 Python 3.9.12 and Spark 3.2.1
-
-
-4. Tasks
-You need to submit the following files on Gradescope: (all in lowercase)
-a. Python scripts: task1.py, task2.py
-b. [OPTIONAL] You can include other scripts to support your programs (e.g., callable functions).
 
 4.1 Graph Construction
 To construct a social network graph, each node represents a user and there will be an edge between two
