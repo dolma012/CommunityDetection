@@ -1,11 +1,9 @@
 
 
-1. Overview of the Assignment\n
-
-Explored the Spark GraphFrames library as well as implemented Girvan-Newman algorithm using the Spark Framework/distributed environment to detect communities in graphs. Used the ub_sample_data.csv dataset to find users who have a similar business taste.
+Overview of the Assignment: Explored the Spark GraphFrames library as well as implemented Girvan-Newman algorithm using the Spark Framework/distributed environment to detect communities in graphs. Used the ub_sample_data.csv dataset to find users who have a similar business taste.
 
 
-3. Requirements
+Requirements: 
 2.1 Programming Requirements
 a. Python and Spark to implement all tasks.
 b. Spark DataFrame and GraphFrames library for task1
