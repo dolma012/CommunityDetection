@@ -1,45 +1,23 @@
-CSCI 5523: Introduction to Data Mining
 
 
 1. Overview of the Assignment
-In this assignment, you will explore the Spark GraphFrames library as well as implement your own
-Girvan-Newman algorithm using the Spark Framework to detect communities in graphs. You will use the
-ub_sample_data.csv dataset to find users who have a similar business taste. The goal of this assignment
-is to help you understand how to use the Girvan-Newman algorithm to detect communities in an
-efficient way within a distributed environment.
+Explored the Spark GraphFrames library as well as implemented Girvan-Newman algorithm using the Spark Framework to detect communities in graphs. Used the ub_sample_data.csv dataset to find users who have a similar business taste.
 
-2. Requirements
+
+3. Requirements
 2.1 Programming Requirements
-a. You must use Python and Spark to implement all tasks.
-b. You can use the Spark DataFrame and GraphFrames library for task1, but for task2 you can ONLY use
-Spark RDD and standard Python libraries.
-2.2 Submission Platform
-We will use Gradescope to automatically run and grade your submission. You must test your scripts on
-the local machine before submission.
+a. Python and Spark to implement all tasks.
+b. Spark DataFrame and GraphFrames library for task1
+c. ONLY Spark RDD and standard Python libraries for task2
 
 2.3 Programming Environment
 Python 3.9.12 and Spark 3.2.1
 
-2.4 Write your own code
-Do not share code with other students!!
-For this assignment to be an effective learning experience, you must write your own code! We
-emphasize this point because you will be able to find Python implementations of some of the required
-functions on the web. Please do not look for or at any such code!
-TAs will combine all the code we can find from the web (e.g., Github) as well as other students’ code
-from this and other (previous) sections for plagiarism detection. We will report all detected plagiarism.
-
-3. Datasets
-You will continue to use the Yelp dataset. We have generated a sub-dataset, ub_sample_data.csv, from
-the Yelp review dataset containing user_id and business_id. You can access and download the data on
-Google Drive. TAs will use a different test dataset for grading.
 
 4. Tasks
 You need to submit the following files on Gradescope: (all in lowercase)
 a. Python scripts: task1.py, task2.py
 b. [OPTIONAL] You can include other scripts to support your programs (e.g., callable functions).
-
-You don’t need to include your results. TAs will grade the assignment using a separate testing dataset
-(the data format remains the same).
 
 4.1 Graph Construction
 To construct a social network graph, each node represents a user and there will be an edge between two
@@ -93,30 +71,19 @@ Figure 1: community output file format
 
 4.3 Task2: Community Detection Based on Girvan-Newman algorithm (8 pts)
 
-In task2, you will implement your own Girvan-Newman algorithm to detect the communities in the
-network graph. Because the task1 and task2 code will be executed separately, you need to construct the
-graph again in this task following the rules in section 4.1. You can refer to the Chapter 10 from the
-Mining of Massive Datasets book for the algorithm details.
-For task2, you can ONLY use Spark RDD and standard Python libraries. Remember to delete your code
-that imports graphframes.
+In task2, implemented Girvan-Newman algorithm to detect the communities in the
+network graph. 
+
 4.3.1 Betweenness Calculation (4 pts)
-In this part, you will calculate the betweenness of each edge in the original graph you constructed in 4.1.
-Then you need to save your result in a .txt file. The format of each line is
+Calculated the betweenness of each edge in the original graph you constructed in 4.1. Result saved in a .txt file. The format of each line is
 (‘user_id1’, ‘user_id2’), betweenness value
 
-Your result should be firstly sorted by the betweenness values in the descending order and then the first
+Result is firstly sorted by the betweenness values in the descending order and then the first
 user_id in the tuple in lexicographical order (the user_id is type of string). The two user_ids in each tuple
-should also be in lexicographical order. You do not need to round your result.
+should also be in lexicographical order. 
 
 Figure 2: betweenness output file format
 
 4.3.2 Community Detection (4 pts)
-You are required to divide the graph into suitable communities, which reaches the global highest
+Divided the graph into suitable communities, which reaches the global highest
 modularity. The formula of modularity is shown below:
-
-According to the Girvan-Newman algorithm, after removing one edge, you should re-compute the
-betweenness. The “m” in the formula represents the edge number of the original graph. The “A” in the
-formula is the adjacent matrix of the original graph. (Hint: In each remove step, “m” and “A” should not
-be changed).
-If the community only has one user node, we still regard it as a valid community.
-You need to save your result in a .txt file. The format is the same with the output file from task1.
