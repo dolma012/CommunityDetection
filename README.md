@@ -8,10 +8,10 @@ a. Python and Spark to implement all tasks.
 b. Spark DataFrame and GraphFrames library for task1
 c. ONLY Spark RDD and standard Python libraries for task2
 
-# 2.3 Programming Environment
+## 2.3 Programming Environment
 Python 3.9.12 and Spark 3.2.1
 
-# 4.1 Graph Construction
+## 4.1 Graph Construction
 To construct a social network graph, each node represents a user and there will be an edge between two
 nodes if the number of times that two users review the same business is greater than or equivalent to
 the filter threshold. For example, suppose user1 reviewed [business1, business2, business3] and user2
@@ -20,9 +20,9 @@ between user1 and user2.
 If the user node has no edge, we will not include that node in the graph.
 In this assignment, we use the filter threshold 7.
 
-## 4.2 Task1: Community Detection Based on GraphFrames (2 pts)
+## 4.2 Task1: Community Detection Based on GraphFrames 
 
-# Parameters in task1.py
+### Parameters in task1.py
 1. Filter threshold(--filter_threshold): the filter threshold to generate edges between user
 nodes.
 2. Input file Path(--input_file): the path to the input file including path, file name and extension.
@@ -49,12 +49,12 @@ If there is only one node in the community, we still regard it as a valid commun
 
 Figure 1: community output file format
 
-# 4.3 Task2: Community Detection Based on Girvan-Newman algorithm (8 pts)
+## 4.3 Task2: Community Detection Based on Girvan-Newman algorithm 
 
 In task2, implemented Girvan-Newman algorithm to detect the communities in the
 network graph. 
 
-4.3.1 Betweenness Calculation (4 pts)
+4.3.1 Betweenness Calculation 
 Calculated the betweenness of each edge in the original graph you constructed in 4.1. Result saved in a .txt file. The format of each line is
 (‘user_id1’, ‘user_id2’), betweenness value
 
@@ -64,6 +64,6 @@ should also be in lexicographical order.
 
 Figure 2: betweenness output file format
 
-4.3.2 Community Detection (4 pts)
+4.3.2 Community Detection
 Divided the graph into suitable communities, which reaches the global highest
 modularity. The formula of modularity is shown below:
