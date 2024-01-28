@@ -1,6 +1,6 @@
 
 
-# Overview: Explored the Spark GraphFrames library as well as implemented Girvan-Newman algorithm using the Spark Framework/distributed environment to detect communities in graphs. Used the ub_sample_data.csv dataset to find users who have a similar business taste.
+# Overview: Explored the Spark GraphFrames library as well as implemented Girvan-Newman algorithm using the Spark Framework/distributed environment to detect communities in graphs and used the ub_sample_data.csv dataset to find users who have a similar business taste
 
 
 ## Requirements: 
