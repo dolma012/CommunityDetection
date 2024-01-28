@@ -37,12 +37,10 @@ Example: spark-submit --packages graphframes:graphframes:0.8.2-spark3.2-s_2.12 t
 --filter_threshold 7 --input_file data.csv --community_output_file out1
 
 4.2.3 Output Result
-In this task, you need to save your result of communities in a text file (.txt). Each line represents one
-community and the format is:
 
 ‘user_id1’, ‘user_id2’, ‘user_id3’, ‘user_id4’, ...
 
-Your result should be firstly sorted by the size of communities in the ascending order and then the first
+Result is sorted by the size of communities in the ascending order and then the first
 user_id in the community in lexicographical order (the user_id is type of string). The user_ids in each
 community should also be in the lexicographical order.
 If there is only one node in the community, we still regard it as a valid community.
@@ -51,7 +49,7 @@ Figure 1: community output file format
 
 ## 4.3 Task2: Community Detection Based on Girvan-Newman algorithm 
 
-In task2, implemented Girvan-Newman algorithm to detect the communities in the
+Implemented Girvan-Newman algorithm to detect the communities in the
 network graph. 
 
 4.3.1 Betweenness Calculation 
