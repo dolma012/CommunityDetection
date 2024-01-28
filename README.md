@@ -4,9 +4,9 @@
 
 
 ## Requirements: 
-a. Python and Spark to implement all tasks.\n
-b. Spark DataFrame and GraphFrames library for task1\n
-c. ONLY Spark RDD and standard Python libraries for task2\n
+- Python and Spark to implement all tasks.\n
+- Spark DataFrame and GraphFrames library for task1\n
+- ONLY Spark RDD and standard Python libraries used for task2\n
 
 ## 2.3 Programming Environment
 Python 3.9.12 and Spark 3.2.1
